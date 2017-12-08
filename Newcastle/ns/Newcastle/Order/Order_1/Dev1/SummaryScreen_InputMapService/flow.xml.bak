@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+
+  <!-- nodes -->
+
+<INVOKE SERVICE="Newcastle.Order.Order_1.Dev1:SummaryScreen_QueueTask">
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/Order;4;0;BigBang.Documents:Order" TO="/TaskData;2;0/Order;2;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/manApprovalStatus;1;0" TO="/TaskData;2;0/manApprovalStatus;1;0">
+</MAPCOPY>
+</MAP>
+</INVOKE>
+</FLOW>
